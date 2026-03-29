@@ -1,5 +1,7 @@
 <?php
 
+namespace craft\contentmigrations;
+
 use craft\db\Migration;
 use craft\elements\Entry;
 
