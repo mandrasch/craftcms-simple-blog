@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ entry.title }} - {{ siteName }}</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+        a { color: #0B69A3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 24px; font-size: 0.875rem; }
+        .date { color: #777; font-size: 0.875rem; margin-bottom: 24px; }
+        .content { margin-top: 24px; }
+        .content h1, .content h2, .content h3 { margin-top: 1.5em; }
+        .content p { margin-bottom: 1em; }
+        .content a { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <a class="back" href="/">&larr; Back to all articles</a>
+
+    <article>
+        <h1>{{ entry.title }}</h1>
+        <div class="date">{{ entry.postDate|date('F j, Y') }}</div>
+
+        {% if entry.text %}
+            <div class="content">{{ entry.text }}</div>
+        {% endif %}
+    </article>
+</body>
+</html>

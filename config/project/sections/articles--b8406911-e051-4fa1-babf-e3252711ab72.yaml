@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: c7768c31-b9e9-4df1-92d1-6dc44ad95b81 # Article
+handle: articles
+maxAuthors: 1
+name: Articles
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  79eebfe2-cf30-4372-bdff-c07deff1a338: # Simple Blog
+    enabledByDefault: true
+    hasUrls: true
+    template: articles/_entry.twig
+    uriFormat: 'articles/{slug}'
+type: channel

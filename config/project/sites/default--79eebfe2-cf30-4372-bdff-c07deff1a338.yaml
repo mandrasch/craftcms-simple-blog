@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'Simple Blog'
+primary: true
+siteGroup: 1e422aa3-1beb-447e-889f-76104ff3aa53 # Simple Blog
+sortOrder: 1

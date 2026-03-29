@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ siteName }}</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+        h1 { margin-bottom: 40px; }
+        .post { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid #e0e0e0; }
+        .post:last-child { border-bottom: none; }
+        .post h2 { margin: 0 0 8px; }
+        .post h2 a { color: #0B69A3; text-decoration: none; }
+        .post h2 a:hover { text-decoration: underline; }
+        .post .date { color: #777; font-size: 0.875rem; margin-bottom: 8px; }
+        .post .teaser { color: #444; }
+    </style>
+</head>
+<body>
+    <h1>{{ siteName }}</h1>
+
+    {% set articles = craft.entries()
+        .section('articles')
+        .orderBy('postDate DESC')
+        .limit(10)
+        .all() %}
+
+    {% for entry in articles %}
+        <article class="post">
+            <h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+            <div class="date">{{ entry.postDate|date('F j, Y') }}</div>
+            {% if entry.teaserText %}
+                <div class="teaser">{{ entry.teaserText }}</div>
+            {% endif %}
+        </article>
+    {% else %}
+        <p>No articles yet.</p>
+    {% endfor %}
+</body>
+</html>

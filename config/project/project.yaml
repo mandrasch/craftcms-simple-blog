@@ -1,0 +1,30 @@
+dateModified: 1774783479
+email:
+  fromEmail: admin@example.org
+  fromName: 'Simple Blog'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    1e422aa3-1beb-447e-889f-76104ff3aa53: 'Simple Blog' # Simple Blog
+    40a2897b-28e3-4dcf-8694-be669a9b5eef: 'Rich Text' # Rich Text
+    79eebfe2-cf30-4372-bdff-c07deff1a338: 'Simple Blog' # Simple Blog
+    b8406911-e051-4fa1-babf-e3252711ab72: Articles # Articles
+    c7768c31-b9e9-4df1-92d1-6dc44ad95b81: Article # Article
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
+system:
+  edition: solo
+  live: true
+  name: 'Simple Blog'
+  schemaVersion: 5.9.0.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
